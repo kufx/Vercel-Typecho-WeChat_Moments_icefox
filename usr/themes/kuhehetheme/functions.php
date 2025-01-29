@@ -5,56 +5,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 
 
-// 引入文件
-if(!class_exists('CSF')){
-    require_once Helper::options()->pluginDir('jkOptionsFramework').'/jkoptions-framework.php';
-}
 
-// Check core class for avoid errors
-if( class_exists( 'CSF' ) ) {
-
-  // Set a unique slug-like ID
-  // 唯一的配置识别号，必须为你的插件或者主题的目录的名字！！！
-  $prefix = 'kuhehetheme'; 
-
-  // Create options
-  CSF::createOptions( $prefix, array(
-    'menu_title' => 'My Framework',
-    'menu_slug'  => 'kuhehetheme',
-  ) );
-
-  // Create a section
-  CSF::createSection( $prefix, array(
-    'title'  => 'Tab Title 1',
-    'fields' => array(
-
-      // A text field
-      array(
-        'id'    => 'opt-text',
-        'type'  => 'text',
-        'title' => 'Simple Text',
-      ),
-
-    )
-  ) );
-
-  // Create a section
-  CSF::createSection( $prefix, array(
-    'title'  => 'Tab Title 2',
-    'fields' => array(
-
-      // A textarea field
-      array(
-        'id'    => 'opt-textarea',
-        'type'  => 'textarea',
-        'title' => 'Simple Textarea',
-      ),
-
-    )
-  ) );
-
-}
-
+      
 
 
 
